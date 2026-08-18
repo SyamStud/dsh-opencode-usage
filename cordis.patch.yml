@@ -1,0 +1,5 @@
+# dsh bundle layer: mount the OpenCode usage widget plugin (host half is
+# dsh/index.js via the package root export; the browser half is ./client).
+- insert:
+    - id: opencode-usage
+      name: 'dsh-opencode-usage'

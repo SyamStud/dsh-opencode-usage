@@ -1,0 +1,45 @@
+{
+  "name": "dsh-opencode-usage",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "OpenCode usage widget for the DeepSeek Harness web sidebar: host-side proxy to the OpenCode usage API (keeps OPENCODE_API_KEY off the page) plus a client-side bars widget.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "opencode",
+    "usage",
+    "sidebar",
+    "widget",
+    "plugin"
+  ],
+  "license": "MIT",
+  "author": "SyamStud <syamstud@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SyamStud/dsh-opencode-usage.git"
+  },
+  "homepage": "https://github.com/SyamStud/dsh-opencode-usage#readme",
+  "bugs": {
+    "url": "https://github.com/SyamStud/dsh-opencode-usage/issues"
+  },
+  "files": [
+    "dsh",
+    "cordis.patch.yml"
+  ],
+  "exports": {
+    ".": "./dsh/index.js",
+    "./dsh": "./dsh/index.js",
+    "./client": "./dsh/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
